@@ -1,0 +1,11 @@
+import pandas as pd
+import numpy as np
+dete_survey = pd.read_csv('dete_survey.csv')
+tafe_survey = pd.read_csv('tafe_survey.csv')
+pd.options.display.max_columns = 150
+dete_survey.head()
+# Read in the data again, but this time read `Not Stated` values as `NaN`
+dete_survey = pd.read_csv('dete_survey.csv', na_values='Not Stated')
+
+# Quick exploration of the data
+dete_survey.head()
